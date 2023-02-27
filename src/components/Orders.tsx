@@ -48,7 +48,7 @@ const rows = [
     createData(
         4,
         '15 Mar, 2019',
-        'Bruce Springsteen',
+        'Dire Straits',
         'Long Branch, NJ',
         'VISA ⠀•••• 5919',
         212.79,
