@@ -21,6 +21,7 @@ import Avatar from '@mui/material/Avatar'
 import Dashboard from '../pages/Dashboard'
 import LoadingSpinner from './LoadingSpinner'
 import useAuth from '../hooks/useAuth'
+import Privacy from '../pages/Privacy'
 
 const drawerWidth: number = 240
 
@@ -196,7 +197,7 @@ const DashboardLayout = () => {
         }}>
         <Toolbar />
         <Routes>
-          <Route path="/" element={<Dashboard />} />
+          <Route path="/" element={<Privacy />} />
         </Routes>
       </Box>
     </Box>
