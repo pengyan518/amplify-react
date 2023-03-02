@@ -10,6 +10,10 @@ const Copyright = (props: any) => {
       align="center"
       {...props}
     >
+      <Link color="inherit" href="/privacy-policy">
+        Privacy Policy
+      </Link>
+      &nbsp;&nbsp;&nbsp;
       <Link color="inherit" href="https://mui.com/">
         OpenSource💓
       </Link>
