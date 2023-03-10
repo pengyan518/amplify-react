@@ -19,6 +19,7 @@ import {Formik} from 'formik'
 import {useNavigate} from 'react-router-dom'
 import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline'
 import {Auth} from 'aws-amplify'
+import { CognitoHostedUIIdentityProvider } from "@aws-amplify/auth/lib/types"
 import useAuth from '../hooks/useAuth'
 
 import LoadingSpinner from '../components/LoadingSpinner'
@@ -52,7 +53,9 @@ export default function SignIn() {
   }
 
   // @ts-ignore
-  return (
+  // @ts-ignore
+    // @ts-ignore
+    return (
     <Container component="main" maxWidth="xs">
       <CssBaseline />
       <Box
@@ -153,7 +156,7 @@ export default function SignIn() {
                 OR
               </Typography>
               <Button
-                onClick={handleSocialSignIn('Google')}
+                onClick={() => Auth.federatedSignIn({ provider: CognitoHostedUIIdentityProvider.Google })}
                 type="button"
                 fullWidth
                 variant="contained"
@@ -169,7 +172,7 @@ export default function SignIn() {
                 Sign In with Google
               </Button>
               <Button
-                onClick={handleSocialSignIn('Facebook')}
+                onClick={() => Auth.federatedSignIn({ provider: CognitoHostedUIIdentityProvider.Facebook })}
                 type="button"
                 fullWidth
                 variant="contained"
